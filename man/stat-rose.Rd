@@ -8,8 +8,11 @@
 \title{Rose Plot}
 \format{An object of class \code{StatRose} (inherits from \code{Stat}, \code{ggproto}, \code{gg}) of length 3.}
 \usage{
-stat_rose(mapping = aes(), data = NULL, na.rm = FALSE,
-  show.legend = NA, inherit.aes = TRUE, ...)
+stat_rose(mapping = aes(), data = NULL, center = c(0, 0),
+  translate.1 = NULL, trans_h.2 = NULL, trans_v.3 = NULL,
+  trans_al.4 = NULL, rotate.5 = 0, zoom.6 = NULL, mirror.7 = NULL,
+  mirror_h.8 = NULL, mirror_v.9 = NULL, na.rm = FALSE,
+  show.legend = NA, inherit.aes = TRUE, n = 1000, round = 360, ...)
 
 StatRose
 }

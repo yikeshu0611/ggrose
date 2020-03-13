@@ -15,7 +15,3 @@ LazyData: true
 RoxygenNote: 6.1.1
 Depends: 
     ggplot2
-Imports: 
-    tmcn,
-    sf666,
-    sf
