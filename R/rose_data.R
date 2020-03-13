@@ -16,19 +16,17 @@ rose_data <- function(data){
     colnames(dd2)=c('x','y')
     # distribute coord for each class
     cut=round(seq(1, n, by = n/nrow(data)))
-    for (i in 2:length(cut)) {
+    for (i in 2:(length(cut)+1)) {
         if (i==2) ply=NULL
-        ddi=dd2[cut[i-1]:cut[i],]
+        a=cut[i-1]
+        b=cut[i]
+        if (i==2) a=1
+        if (i==(length(cut)+1)) b=n
+        ddi=dd2[a:b,]
         if (i==2) ddi=rbind(dd2[nrow(dd2),],ddi)
         ddi=rbind(center,ddi,center)
         plyi=sf_polygon(ddi)
         ply=rbind(ply,plyi)
-        if (i==length(cut)){
-            ddi=dd2[cut[i]:nrow(dd2),]
-            ddi=rbind(center,ddi,dd2[nrow(dd2),],center)
-            plyi=sf_polygon(ddi)
-            ply=rbind(ply,plyi)
-        }
     }
     if (ncol(data)>=2){
         for (i in 1:ncol(data)) {
