@@ -1,6 +1,6 @@
 Package: ggrose
 Title: Plot Nightingale Rose Map
-Version: 0.0.0.9000
+Version: 1.0
 Authors@R: 
     c(
     person("Jing","Zhang",role = c("aut", "cre"),email = "zj391120@163.com"),
@@ -8,10 +8,17 @@ Authors@R:
     )
 Description: Nightingale rose map is useful for display data. Traditional method using
     pacakge 'ggplt2' is depend on coord_polar() function to curve the axis from bar plot.
-    This package gives a new methord to create this map directly and easily.
+    This package provides a new layer and methord, by split a whole circle, to create this map directly and easily.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
 Depends: 
     ggplot2
+Imports: 
+    do,
+    grid
+Suggests: 
+    ggnewscale
+URL: https://github.com/yikeshu0611/ggrose
+BugReports: https://github.com/yikeshu0611/ggrose/issues
